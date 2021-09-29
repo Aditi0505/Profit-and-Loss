@@ -21,6 +21,12 @@ function calculateProfitAndLoss() {
     stocksInput.value === ""
   ) {
     alert("Please fill out all Fields");
+  } else if (
+    initialPriceInput.value < 0 ||
+    currentPriceInput.value < 0 ||
+    stocksInput.value < 0
+  ) {
+    alert("Please enter non-negative digits only");
   } else {
     if (Number(initialPriceInput.value) > Number(currentPriceInput.value)) {
       loss =
