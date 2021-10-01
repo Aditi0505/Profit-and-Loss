@@ -32,7 +32,9 @@ function calculateProfitAndLoss() {
       loss =
         (Number(initialPriceInput.value) - Number(currentPriceInput.value)) *
         stocksInput.value;
-      lossPercentage = (loss / Number(initialPriceInput.value)) * 100;
+      lossPercentage =
+        (loss / (Number(stocksInput.value) * Number(initialPriceInput.value))) *
+        100;
       output.innerText =
         "Sorry! Your loss is " +
         loss +
@@ -46,7 +48,10 @@ function calculateProfitAndLoss() {
       profit =
         (Number(currentPriceInput.value) - Number(initialPriceInput.value)) *
         stocksInput.value;
-      profitPercentage = (profit / Number(initialPriceInput.value)) * 100;
+      profitPercentage =
+        (profit /
+          (Number(stocksInput.value) * Number(initialPriceInput.value))) *
+        100;
       output.innerText =
         "Yes! Your profit is " +
         profit +
